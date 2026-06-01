@@ -686,7 +686,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   :root{
     --sea:#0d3b5c; --sea2:#14557f; --paper:#f7f1e6; --sand:#ece0c8;
     --ink:#10242f; --muted:#5a6b74; --terra:#c0563a; --line:rgba(16,36,47,.10);
-    --peek: 156px;
+    --peek: 22px;
     --safe-b: env(safe-area-inset-bottom, 0px);
     --safe-t: env(safe-area-inset-top, 0px);
     --safe-l: env(safe-area-inset-left, 0px);
@@ -705,7 +705,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
     position:fixed; z-index:1000; background:var(--paper);
     box-shadow:0 -10px 40px rgba(8,28,42,.28);
     display:flex; flex-direction:column; overflow:hidden;
-    left:0; right:0; bottom:0; height:62vh; max-height:62vh;
+    left:0; right:0; bottom:0; height:calc(62vh + 120px); max-height:calc(62vh + 120px);
     border-radius:20px 20px 0 0;
     transform: translateY(calc(100% - var(--peek) - var(--safe-b)));
     transition: transform .34s cubic-bezier(.22,.8,.28,1);
@@ -749,7 +749,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .fab{position:fixed;z-index:900;width:46px;height:46px;border-radius:50%;background:#fff;
     border:1px solid var(--line);box-shadow:0 4px 14px rgba(8,28,42,.25);cursor:pointer;
     display:flex;align-items:center;justify-content:center;color:var(--sea);}
-  #locate{right:calc(14px + var(--safe-r)); bottom:calc(var(--peek) + 18px + var(--safe-b));}
+  #locate{right:calc(14px + var(--safe-r)); bottom:calc(70px + var(--safe-b));}
   .fab svg{width:23px;height:23px;}
 
   .mkw{display:flex;align-items:center;justify-content:center;}
